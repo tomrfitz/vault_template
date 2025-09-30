@@ -94,8 +94,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -286,10 +285,11 @@
       "open-vscode:VSCode": false,
       "notebook-navigator:Notebook Navigator": true,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "workspaces:Manage workspace layouts": false
+      "workspaces:Manage workspace layouts": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "37fee19caee42314",
+  "active": "895dc005d5f6776a",
   "lastOpenFiles": [
     "README.md",
     "Journal/Daily/2025-09-30.md",
