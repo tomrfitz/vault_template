@@ -11,10 +11,24 @@
             "id": "9d8809df81dd0dc0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Journal/Daily/2025-09-30.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-09-30"
             }
           }
         ]
@@ -149,12 +163,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Journal/Daily/2025-09-30.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 2025-09-30"
             }
           },
           {
@@ -218,11 +233,14 @@
       "audio-recorder:Start/stop recording": false,
       "open-vscode:VSCode": false,
       "notebook-navigator:Notebook Navigator": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "895dc005d5f6776a",
+  "active": "9d8809df81dd0dc0",
   "lastOpenFiles": [
+    "Journal/Daily/2025-09-30.md",
     "README.md",
     "Templates/Yearly Note Template.md",
     "Templates/Weekly Note Template.md",
