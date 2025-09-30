@@ -17,7 +17,7 @@ This template should work as-is for most people looking for the above, and is de
 
 Use periodic notes to plan goals or tasks, and record what you got up to or how you felt about that day, week, or month. Over time, this will create a neat timeline of actions / interests / ideas / people you spend time on as you make links in your periodic notes. This sort of structure is helpful both to evaluate your past and to scaffold your future, helping you stay aligned with your goals and principles.
 
-For example, you might record some tasks:
+For example, you might record some things you want to work on:
 
 ![[2025-09-30#Goals]]
 
