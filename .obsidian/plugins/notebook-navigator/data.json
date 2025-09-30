@@ -236,7 +236,12 @@
     "Functions": "lucide-function-square",
     "Files": "lucide-file",
     "Bases": "lucide-database",
-    "Templates": "lucide-layout-template"
+    "Templates": "lucide-layout-template",
+    "Journal/Daily": "calendar-day",
+    "Journal/Monthly": "calendar-month",
+    "Journal/Weekly": "calendar-week",
+    "Journal/Quarterly": "calendar-quarter",
+    "Journal/Yearly": "calendar-year"
   },
   "folderColors": {},
   "folderBackgroundColors": {},
@@ -270,6 +275,14 @@
   "recentColors": [],
   "lastShownVersion": "",
   "settingsVersion": 1,
-  "rootFolderOrder": [],
+  "rootFolderOrder": [
+    "Journal",
+    "Notes",
+    "References",
+    "Bases",
+    "Templates",
+    "Files",
+    "Functions"
+  ],
   "dualPane": false
 }
