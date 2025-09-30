@@ -11,24 +11,14 @@
             "id": "d44bc4f4960a2e57",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Journal/Daily/2025-09-30.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "Template/.obsidian/plugins/notebook-navigator/data.json",
+                "bFile": "Template/.obsidian/plugins/notebook-navigator/data.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "2025-09-30"
+              "icon": "diff",
+              "title": "Diff: data.json"
             }
           }
         ]
@@ -85,13 +75,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Journal/Daily/2025-09-30.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-09-30"
+              "title": "Outline"
             }
           },
           {
@@ -190,9 +179,9 @@
   },
   "active": "d44bc4f4960a2e57",
   "lastOpenFiles": [
+    "Journal/Daily/2025-09-30.md",
     "Journal/Quarterly/2025-Q3.md",
     "Journal/Monthly/2025-09.md",
-    "Journal/Daily/2025-09-30.md",
     "References/@mankerContextPredictabilityPhonetic2016.md",
     "Bases/Related.base",
     "Journal/Yearly/2025.md",

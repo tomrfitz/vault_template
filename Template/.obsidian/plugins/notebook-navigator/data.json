@@ -230,7 +230,13 @@
   "fileIcons": {},
   "fileColors": {},
   "folderIcons": {
-    "Journal": "lucide-notebook"
+    "Journal": "lucide-notebook",
+    "References": "lucide-newspaper",
+    "Notes": "lucide-notepad-text",
+    "Functions": "lucide-function-square",
+    "Files": "lucide-file",
+    "Bases": "lucide-database",
+    "Templates": "lucide-book-template"
   },
   "folderColors": {},
   "folderBackgroundColors": {},
