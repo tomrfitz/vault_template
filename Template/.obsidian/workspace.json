@@ -4,21 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "0bb2cc27f4711e9f",
+        "id": "dca858301ee0688f",
         "type": "tabs",
         "children": [
           {
-            "id": "d44bc4f4960a2e57",
+            "id": "41f6d42cda34f20e",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "Template/.obsidian/plugins/notebook-navigator/data.json",
-                "bFile": "Template/.obsidian/plugins/notebook-navigator/data.json",
-                "aRef": ""
+                "file": "README.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: data.json"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -43,8 +53,22 @@
               "icon": "notebook",
               "title": "Notebook Navigator"
             }
+          },
+          {
+            "id": "9cf248b0f6161a4b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -75,12 +99,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of README"
             }
           },
           {
@@ -177,8 +202,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d44bc4f4960a2e57",
+  "active": "41f6d42cda34f20e",
   "lastOpenFiles": [
+    "Journal/Daily.md",
+    "README.md",
+    "References/@Vaswani - 2017lxt.md",
+    "Bases/Journal.base",
+    "Bases/Classes.base",
     "Journal/Daily/2025-09-30.md",
     "Journal/Quarterly/2025-Q3.md",
     "Journal/Monthly/2025-09.md",
@@ -186,7 +216,6 @@
     "Bases/Related.base",
     "Journal/Yearly/2025.md",
     "Journal/Weekly/2025-W40.md",
-    "README.md",
     "Templates/Yearly Note Template.md",
     "Templates/Weekly Note Template.md",
     "Templates/Quarterly Note Template.md",
@@ -196,8 +225,6 @@
     "Templates/Class Template.md",
     "Templates",
     "Functions/daily_quote.js",
-    "Bases/Journal.base",
-    "Bases/Classes.base",
     "Bases",
     "Bases copy/Related.base",
     "Bases copy/Journal.base",

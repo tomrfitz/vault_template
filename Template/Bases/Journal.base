@@ -25,7 +25,7 @@ views:
       and:
         - file.ctime.format('YYYY-[W]W') == this.file.name
     order:
-      - file.name      
+      - file.name
       - file.tags
       - file.links
       - file.ctime
@@ -35,7 +35,7 @@ views:
       and:
         - file.mtime.format('YYYY-[W]W') == this.file.name
     order:
-      - file.name      
+      - file.name
       - file.tags
       - file.links
       - file.mtime
