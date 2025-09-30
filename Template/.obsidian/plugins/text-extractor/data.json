@@ -3,5 +3,5 @@
     "eng"
   ],
   "rightClickMenu": true,
-  "useSystemOCR": false
+  "useSystemOCR": true
 }

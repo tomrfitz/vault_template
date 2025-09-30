@@ -10,25 +10,25 @@
   },
   "weekly": {
     "format": "",
-    "template": "",
+    "template": "Templates/Weekly Note Template.md",
     "folder": "Journal/Weekly",
     "enabled": true
   },
   "monthly": {
     "format": "",
-    "template": "",
+    "template": "Templates/Monthly Note Template.md",
     "folder": "Journal/Monthly",
     "enabled": true
   },
   "quarterly": {
     "format": "",
-    "template": "",
+    "template": "Templates/Quarterly Note Template.md",
     "folder": "Journal/Quarterly",
     "enabled": true
   },
   "yearly": {
     "format": "",
-    "template": "",
+    "template": "Templates/Yearly Note Template.md",
     "folder": "Journal/Yearly",
     "enabled": true
   }

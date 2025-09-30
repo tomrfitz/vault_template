@@ -1,5 +1,5 @@
 {
   "readingSpeed": 200,
-  "format": "digital",
+  "format": "simple",
   "appendText": "read"
 }

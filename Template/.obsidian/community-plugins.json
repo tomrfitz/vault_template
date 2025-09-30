@@ -11,5 +11,21 @@
   "open-vscode",
   "notebook-navigator",
   "obsidian-pandoc-reference-list",
-  "obsidian-pandoc"
+  "obsidian-pandoc",
+  "table-editor-obsidian",
+  "better-word-count",
+  "calendar",
+  "cm-editor-syntax-highlight-obsidian",
+  "obsidian-excalidraw-plugin",
+  "obsidian-footnotes",
+  "obsidian-heading-shifter",
+  "mehrmaid",
+  "nldates-obsidian",
+  "periodic-notes",
+  "obsidian-reading-time",
+  "obsidian-wikipedia",
+  "text-extractor",
+  "obsidian-zotero-desktop-connector",
+  "obsidian-rollover-daily-todos",
+  "multi-properties"
 ]
