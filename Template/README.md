@@ -1,11 +1,12 @@
 ---
 date created: 2025-09-30, 16:48:05
-date modified: 2025-09-30, 18:10:17
+date modified: 2025-09-30, 18:29:59
 ---
 
 # README
 
 This Obsidian vault template is intended for general use for someone who:
+
 1. wants to keep track of and plan how they spend their time,
 2. wants to collect, record, and connect their thoughts about other published works,
 3. and wants to automate or digitize one or both of the above without getting too in the weeds.
@@ -23,8 +24,6 @@ For example, you might record some tasks:
 or some reflections about last week:
 
 ![[2025-W39#Reflections]]
-
-## Plugins
 
 ## Structure
 
@@ -57,11 +56,11 @@ This template has one function included, [[daily_quote.js]], which provides a ra
 
 ### Journal
 
-The Journal contains periodic notes and is the backbone of the vault's linking structure. Just as important as our ideas are is how we interact with them over time. 
+The Journal contains periodic notes and is the backbone of the vault's linking structure. Just as important as our ideas are is how we interact with them over time.
 
 ### Notes
 
-This might normally be the root folder for some people, but I like [[#Notebook Navigator]] and this keeps things tidy. 
+This might normally be the root folder for some people, but I like [[#Notebook Navigator]] and this keeps things tidy.
 
 ### References
 
@@ -70,3 +69,47 @@ Storage for web clippings from kepano's browser extension and literature importe
 ### Templates
 
 These are files for the Templater plugin to automatically generate periodic notes and Zotero imports.
+
+## Plugins
+
+### Core
+
+Everything currently available, except:
+
+- Publish
+- Sync
+- Word count
+
+### Community
+
+- [obsidian-git](https://github.com/Vinzent03/obsidian-git)
+- templater-obsidian
+- obsidian-tasks-plugin
+- obsidian-style-settings
+- obsidian-minimal-settings
+- omnisearch
+- obsidian-importer
+- obsidian-linter
+- code-styler
+- open-vscode
+- notebook-navigator
+- obsidian-pandoc-reference-list
+- obsidian-pandoc
+- table-editor-obsidian
+- better-word-count
+- calendar
+- cm-editor-syntax-highlight-obsidian
+- obsidian-excalidraw-plugin
+- obsidian-footnotes
+- obsidian-heading-shifter
+- mehrmaid
+- nldates-obsidian
+- periodic-notes
+- obsidian-reading-time
+- obsidian-wikipedia
+- text-extractor
+- obsidian-zotero-desktop-connector
+- obsidian-rollover-daily-todos
+- multi-properties
+
+## Credits

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e3bc8d687f812c80",
+        "id": "6cc8e96dc178540e",
         "type": "tabs",
         "children": [
           {
-            "id": "b8761d1f8b3414dc",
+            "id": "37fee19caee42314",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -141,6 +141,18 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
+          },
+          {
+            "id": "ab65f62ca48561a7",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "README.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
           }
         ]
       },
@@ -199,11 +211,13 @@
       "templates:Insert template": true,
       "open-vscode:VSCode": false,
       "notebook-navigator:Notebook Navigator": true,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "b8761d1f8b3414dc",
+  "active": "37fee19caee42314",
   "lastOpenFiles": [
+    "README.md",
     "Journal/Daily/2025-09-30.md",
     "Journal/Yearly/2025.md",
     "Templates/Yearly Note Template.md",
@@ -216,7 +230,6 @@
     "Templates/Monthly Note Template.md",
     "Templates/Literature Note Template.md",
     "Templates/Daily Note Template.md",
-    "README.md",
     "Templates/Class Template.md",
     "Journal/Daily.md",
     "References/@Vaswani - 2017lxt.md",
