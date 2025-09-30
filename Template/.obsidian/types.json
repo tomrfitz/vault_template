@@ -1,8 +1,14 @@
 {
   "types": {
+    "tags": "tags",
+    "date created": "datetime",
+    "date modified": "datetime",
+    "birthday": "date",
     "aliases": "aliases",
     "cssclasses": "multitext",
-    "tags": "tags",
+    "dateread": "date",
+    "read": "checkbox",
+    "type": "multitext",
     "TQ_explain": "checkbox",
     "TQ_extra_instructions": "text",
     "TQ_short_mode": "checkbox",

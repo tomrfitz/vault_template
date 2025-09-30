@@ -1,0 +1,1 @@
+{"path":"Files/csc331-f25-w04_5.png","text":"int main() { cout<<\"we will use stack functions.'\"<<endl; stackType stack; stack.push (7) ; cout<<stack. top () <<endl; for (int i=0;i<7;i++) stack.push(pow(2,1)) ; while(!stack.empty()) { cout<<stack.top ()<<\" \"; stack.pop() ; } cout<<endl; cout<< \"done.\"<<endl; return 0; I","libVersion":"0.5.0","langs":"eng"}

@@ -1,0 +1,30 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "png",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Pandoc",
+      "format": "pandoc",
+      "cslStyle": "bibtex",
+      "brackets": true
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Literature Note",
+      "outputPathTemplate": "References/@{{citekey}}.md",
+      "imageOutputPathTemplate": "Files/@{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "Templates/Literature Note Template.md",
+      "cslStyle": "modern-language-association"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": false,
+  "whichNotesToOpenAfterImport": "first-imported-note",
+  "pdfExportImageOCR": true,
+  "pdfExportImageTesseractPath": "/opt/homebrew/bin/tesseract"
+}

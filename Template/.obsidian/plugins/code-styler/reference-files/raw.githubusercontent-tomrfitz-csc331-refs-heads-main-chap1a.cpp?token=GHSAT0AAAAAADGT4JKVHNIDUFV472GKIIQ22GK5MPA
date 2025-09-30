@@ -1,0 +1,70 @@
+// chap1a.cpp
+// kbyron@bmcc.cuny.edu
+// 3/3/19
+// C program to demonstrate user-defined stack class
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+class stackType {
+  public:
+    bool empty();
+    void pop();
+    void push(int num);
+    int top();
+    stackType();
+
+  private:
+    struct nodeType {
+        int info;
+        nodeType *link;
+    };
+
+    nodeType *head, *temp;
+};
+
+int main() {
+    cout << "we will use stack functions." << endl;
+    stackType stack;
+    stack.push(7);
+    cout << stack.top() << endl;
+    for (int i = 0; i < 7; i++)
+        stack.push(pow(2, i));
+    while (!stack.empty()) {
+        cout << stack.top() << " ";
+        stack.pop();
+    }
+    cout << endl;
+    cout << "done." << endl;
+    return 0;
+}
+
+bool stackType::empty() { return head == NULL; }
+
+void stackType::pop() {
+    if (head == NULL)
+        cout << "pop() function failed ... empty stack.\n";
+    else {
+        temp = head;
+        head = head->link;
+        delete temp;
+    }
+}
+
+void stackType::push(int num) {
+    temp = new nodeType;
+    temp->link = head;
+    temp->info = num;
+    head = temp;
+}
+
+int stackType::top() {
+    if (head == NULL)
+        cout << "top() function failed ... empty stack.\n";
+    else
+        return head->info;
+}
+
+stackType::stackType() { // default constructor
+    head = NULL;
+}

@@ -1,0 +1,101 @@
+views:
+  - type: table
+    name: Created this day
+    filters:
+      and:
+        - file.ctime == this.file.name
+    order:
+      - file.name
+      - file.tags
+      - file.links
+      - file.ctime
+  - type: table
+    name: Modified this day
+    filters:
+      and:
+        - file.mtime == this.file.name
+    order:
+      - file.name
+      - file.tags
+      - file.links
+      - file.mtime
+  - type: table
+    name: Created this week
+    filters:
+      and:
+        - file.ctime.format('YYYY-[W]W') == this.file.name
+    order:
+      - file.name      
+      - file.tags
+      - file.links
+      - file.ctime
+  - type: table
+    name: Modified this week
+    filters:
+      and:
+        - file.mtime.format('YYYY-[W]W') == this.file.name
+    order:
+      - file.name      
+      - file.tags
+      - file.links
+      - file.mtime
+  - type: table
+    name: Created this month
+    filters:
+      and:
+        - file.ctime.format('YYYY-MM') == this.file.name
+    order:
+      - file.name
+      - file.tags
+      - file.links
+      - file.ctime
+  - type: table
+    name: Modified this month
+    filters:
+      and:
+        - file.mtime.format('YYYY-MM') == this.file.name
+    order:
+      - file.name
+      - file.tags
+      - file.links
+      - file.mtime
+  - type: table
+    name: Created this quarter
+    filters:
+      and:
+        - file.ctime.format('YYYY-[Q]Q') == this.file.name
+    order:
+      - file.name
+      - file.tags
+      - file.links
+      - file.ctime
+  - type: table
+    name: Modified this quarter
+    filters:
+      and:
+        - file.mtime.format('YYYY-[Q]Q') == this.file.name
+    order:
+      - file.name
+      - file.tags
+      - file.links
+      - file.mtime
+  - type: table
+    name: Created this year
+    filters:
+      and:
+        - file.ctime.format('YYYY') == this.file.name
+    order:
+      - file.name
+      - file.tags
+      - file.links
+      - file.ctime
+  - type: table
+    name: Modified this year
+    filters:
+      and:
+        - file.mtime.format('YYYY') == this.file.name
+    order:
+      - file.name
+      - file.tags
+      - file.links
+      - file.mtime

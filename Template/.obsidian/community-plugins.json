@@ -7,5 +7,9 @@
   "omnisearch",
   "obsidian-importer",
   "obsidian-linter",
-  "code-styler"
+  "code-styler",
+  "open-vscode",
+  "notebook-navigator",
+  "obsidian-pandoc-reference-list",
+  "obsidian-pandoc"
 ]

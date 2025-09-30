@@ -1,0 +1,7 @@
+// CSC 331 Section 500
+// Thomas FitzGerald
+// csc331_500_prog3_fitzgerald.cpp
+// 2025-10-31
+// C++ program to test a stack class
+
+int main() { return 0; }

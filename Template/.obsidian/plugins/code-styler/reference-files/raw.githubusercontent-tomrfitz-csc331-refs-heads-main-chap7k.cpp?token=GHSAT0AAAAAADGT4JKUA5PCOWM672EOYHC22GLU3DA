@@ -1,0 +1,35 @@
+// chap7K.cpp
+// kbyron@bmcc.cuny.edu
+// 9/24/19
+// C program to illustrate a C++ string parse
+// cloned from chap7J.cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string name, t;
+    int age, namelen, pos1, pos2;
+    char cmd = ' ';
+    while (cmd != 'Q') {
+        cout << "enter transaction ... ";
+        getline(cin, t);
+        cmd = t[0];
+        cout << "cmd = " << cmd << endl;
+        if (cmd == 'A') {
+            pos1 = 1;
+            pos2 = t.find(' ', pos1 + 1);
+            namelen = pos2 - pos1 - 1;
+            name = t.substr(pos1 + 1, namelen);
+            age = stoi(t.substr(pos2 + 1));
+            cout << name << " " << age << endl;
+        }
+        if (cmd == 'D') {
+            pos1 = 1;
+            pos2 = t.find(' ', pos1 + 1);
+            namelen = pos2 - pos1 - 1;
+            name = t.substr(pos1 + 1, namelen);
+            cout << name << endl;
+        }
+    }
+}

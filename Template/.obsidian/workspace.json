@@ -73,8 +73,19 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "895dc005d5f6776a",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook",
+              "title": "Notebook Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -195,11 +206,30 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "audio-recorder:Start/stop recording": false
+      "audio-recorder:Start/stop recording": false,
+      "open-vscode:VSCode": false,
+      "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "74b9f4f1ea4c498f",
+  "active": "895dc005d5f6776a",
   "lastOpenFiles": [
+    "Templates/Yearly Note Template.md",
+    "Templates/Weekly Note Template.md",
+    "Templates/Quarterly Note Template.md",
+    "Templates/Monthly Note Template.md",
+    "Templates/Literature Note Template.md",
+    "Templates/Daily Note Template.md",
+    "Templates/Class Template.md",
+    "Templates",
+    "Functions/daily_quote.js",
+    "Bases/Related.base",
+    "Bases/Journal.base",
+    "Bases/Classes.base",
+    "Bases",
+    "Bases copy/Related.base",
+    "Bases copy/Journal.base",
+    "Bases copy/Classes.base",
+    "Bases copy",
     "README.md",
     "Welcome.md"
   ]

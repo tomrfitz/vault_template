@@ -1,0 +1,50 @@
+// chap7h.cpp
+// kbyron@bmcc.cuny.edu
+// last revised 9-18-2019
+// C program to illustrate some C++ i-o and string class functions
+// cloned from chap7g.cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string name1 = "yes", name2 = "yes";
+    while (!(name1.compare("no") + name2.compare("no") == 0)) {
+        cout << "enter 2 names separated by space (enter 'no no' when done) "
+                "... ";
+        cin >> name1 >> name2;
+        int result = name1.compare(name2);
+        cout << " name1 = " << name1 << " name2 = " << name2
+             << " result = " << result << endl;
+        if (result == 0)
+            cout << name1 << " = " << name2 << endl;
+        else if (result < 0)
+            cout << name1 << " < " << name2 << endl;
+        else
+            cout << name1 << " > " << name2 << endl;
+        if (name1 > name2)
+            cout << "name1 is greater" << endl;
+        else if (name1 < name2)
+            cout << "name1 is less" << endl;
+        else if (name1 == name2)
+            cout << "name1 is equal" << endl;
+    }
+    string E("23+5*8-");
+    cout << "enter a post-fix expression (enter 'quit' when done) ... ";
+    cin >> E;
+    while (E.compare("quit") != 0) {
+        for (int i = 0; i < E.length(); i += 1) {
+            cout << E[i] << " ";
+            char x = E[i];
+            if ((x >= '0') && (x <= '9')) {
+                cout << " digit \n";
+            } else {
+                cout << " operator \n";
+            }
+        }
+        cout << "enter a post-fix expression (enter 'quit' when done) ... ";
+        cin >> E;
+    }
+    cout << "good-bye." << endl;
+    return 0;
+}

@@ -1,0 +1,24 @@
+// chap1c.cpp
+// kbyron@bmcc.cuny.edu
+// 3/3/19
+// C program to demonstrate stack standard class
+#include <cmath>
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    cout << "we will use stack functions." << endl;
+    stack<int> stack;
+    stack.push(7);
+    cout << stack.top() << endl;
+    for (int i = 0; i < 7; i++)
+        stack.push(pow(2, i));
+    while (!stack.empty()) {
+        cout << stack.top() << " ";
+        stack.pop();
+    }
+    cout << endl;
+    cout << "done." << endl;
+    return 0;
+}

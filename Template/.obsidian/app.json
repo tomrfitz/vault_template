@@ -1,3 +1,29 @@
 {
-  "promptDelete": false
+  "legacyEditor": false,
+  "livePreview": true,
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "strictLineBreaks": false,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "fileSortOrder": "alphabetical",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Notes",
+  "attachmentFolderPath": "Files",
+  "promptDelete": false,
+  "showFrontmatter": false,
+  "lineWrap": true,
+  "readableLineLength": true,
+  "useMarkdownLinks": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  },
+  "showInlineTitle": false,
+  "useTab": false,
+  "tabSize": 4,
+  "showIndentGuide": false
 }

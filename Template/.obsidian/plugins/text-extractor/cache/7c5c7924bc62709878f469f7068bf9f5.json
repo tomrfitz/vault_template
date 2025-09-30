@@ -1,0 +1,1 @@
+{"path":"Files/csc331-f25-w03_2.png","text":"nodeType* buildListFwdOrdered(){ // function definition nodeType *first; int num; cout << \"Enter a list of integers ending with -999.\" << endl; cin >> num; first = NULL; while (num != -999) { insertNum(first,num); cout << \"successful insertion\" << endl; cin >> num; } return first; }","libVersion":"0.5.0","langs":"eng"}

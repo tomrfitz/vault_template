@@ -1,0 +1,281 @@
+// CSC 331 Section 500
+// Thomas FitzGerald
+// csc331_500_prog2_fitzgerald.cpp
+// 2025-10-10
+// C++ program to manage a book inventory using a linked list
+
+#include "book_f25.h"
+using std::cin;
+using std::cout;
+using std::endl;
+using std::nullopt;
+using std::optional;
+using std::string;
+
+// ****************************************************************************
+// NOLINTBEGIN
+// clang-format off
+// unedited function definitions provided in book_f25.h:
+bool book_f25::addBook(int ID, string title) {
+  bookType *p = first, *prev_p = first;
+  bool found = false;
+  while (p != NULL && !found) {
+    found = (ID == p->ID_bt);
+    prev_p = p;
+    p = p->next_bt;
+  }
+  if (found)
+    return false;
+  else{
+    bookType *newBook = new bookType;
+    newBook->ID_bt = ID;
+    newBook->title_bt = title;
+    newBook->qoh_bt = 0;
+    newBook->next_bt = NULL;
+    if (prev_p == NULL)
+      first = newBook;
+    else
+      prev_p->next_bt = newBook;
+    return true;
+  }
+}
+void book_f25::list() {
+  if(first == NULL)
+    cout << "No books." << endl;
+  else {
+    bookType *current=first;
+    int i=0;
+    while(current != NULL){
+      i++;
+      cout << i << ". " << current->ID_bt << " " << current->title_bt << " " << current->qoh_bt << endl;
+      current=current->next_bt;
+    }
+  }
+}
+book_f25::book_f25(){
+  first=NULL;
+}
+
+// ****************************************************************************
+// NOLINTEND
+// clang-format on
+// written by me for prog2:
+
+bool book_f25::removeBook(int ID) {
+    traverseResult p = findNode(ID);
+    bookType *curr = p.curr;
+    bookType *prev = p.prev;
+
+    // if ID found, remove the book from the list and return true
+    if (curr != nullptr) {
+        if (prev == nullptr) {     // if the previous node is the head,
+            first = curr->next_bt; // update the head to skip the current node,
+        } else {                   // otherwise,
+            prev->next_bt = curr->next_bt; // skip the current node.
+        }
+        delete curr; // curr no longer linked in list, so clear memory
+        return true;
+    }
+    return false; // ID not found, so do nothing and return false
+}
+
+bool book_f25::orderBooks(int ID, int quantity) {
+    traverseResult p = findNode(ID);
+    bookType *curr = p.curr;
+
+    if (curr != nullptr) {        // if ID is found.
+        curr->qoh_bt += quantity; // increase qoh by quantity.
+        return true;              // success
+    }
+    return false; // ID not found, so do nothing and return false
+}
+
+book_f25::sellResult book_f25::sellBooks(int ID, int quantity) {
+    traverseResult p = findNode(ID);
+    bookType *curr = p.curr;
+
+    if (curr != nullptr) {              // if ID is found.
+        if (curr->qoh_bt >= quantity) { // check if qoh would go negative
+            curr->qoh_bt -= quantity;   // if >=0, subtract from qoh,
+            return {sellResult::Status::Success,
+                    quantity}; // and return success.
+        } else {               // if <0,
+            return {sellResult::Status::Short, curr->qoh_bt,
+                    curr->title_bt}; // return the shortage.
+        }
+    }
+    return {sellResult::Status::NotFound, 0,
+            ""}; // if ID not in list, do nothing and return false
+}
+
+//  * since input tx will be always valid, negative qoh case shouldn't
+//  * occur, but for fun I will try to implement what I think is the
+//  * best way to handle this. possible options sorted from most to
+//  * least bad (I think):
+//  * x set qoh to negative value, or
+//  * x set qoh to 0, or
+//  * - set qoh to 0 and notify user, or
+//  * - reject the transaction as invalid, or
+//  * ✓ user decides to sell all or enter a new tx.
+void handleShortage(book_f25 &myBooks, int ID, int requested, int available,
+                    const string &title) {
+    cout << "not enough books on hand to sell " << requested << " copies of "
+         << title << "." << endl;
+    cout << "Do you want to sell all copies on hand? (y/n)" << endl;
+
+    string response;
+    getline(cin, response);
+
+    if (!response.empty() && (response[0] == 'y' || response[0] == 'Y')) {
+        book_f25::sellResult result;
+        result = myBooks.sellBooks(ID, available);
+        if (result.status == book_f25::sellResult::Status::Success) {
+            cout << "books sold" << endl;
+        } else {
+            cout << "books not sold" << endl;
+        }
+    }
+}
+
+book_f25::traverseResult book_f25::findNode(int ID) const {
+    bookType *curr = first;
+    bookType *prev = nullptr;
+
+    while (curr != nullptr && curr->ID_bt != ID) {
+        prev = curr;
+        curr = curr->next_bt;
+    }
+    return {curr, curr ? prev : nullptr};
+}
+
+// struct to hold parsed transaction results
+struct parseResult {
+    int ID = 0;
+    optional<string> title; // only for Add operation
+    optional<int> quantity; // only for Order and Sell operations
+};
+
+/**
+ * @brief Parse a transaction string into its components
+ *
+ * @param tx the transaction string to parse
+ * @param op the operation code, which determines how to parse the string
+ * @return parseResult
+ */
+parseResult parseTransaction(const string &tx, char op) {
+    // all transactions will be well-formed, so we know that parameters are
+    // bound by spaces. knowing these bounds, we can find all parameters
+    size_t firstSpacePos = tx.find_first_of(' ', 0);
+    size_t secondSpacePos = tx.find_first_of(' ', firstSpacePos + 1);
+
+    // get substring between spaces
+    string idStr =
+        tx.substr(firstSpacePos + 1, secondSpacePos - firstSpacePos - 1);
+    int ID = stoi(idStr); // convert string ID to int
+
+    // Add op will contain title but not quantity
+    if (op == 'A') {
+        string title = tx.substr(secondSpacePos + 1);
+        return {ID, title, nullopt};
+    }
+    // Order and Sell ops will contain quantity but not title
+    else if (op == 'O' || op == 'S') {
+        int quantity = stoi(tx.substr(secondSpacePos + 1));
+        return {ID, nullopt, quantity};
+    }
+    // in remaining cases ("R" because we know all transactions will be
+    // well-formed), only return a value for ID
+    return {ID, nullopt, nullopt};
+}
+
+/**
+ * @brief Get a new transaction from the user
+ *
+ * @param tx the transaction string to populate
+ * @param op the operation code to populate
+ */
+void newTX(string &tx, char &op) {
+    cout << "enter a transaction: ";
+    getline(cin, tx);
+    op = tx[0];
+}
+
+/**
+ * @brief Main function to run the book inventory program
+ *
+ * @return int exit code
+ */
+int main() {
+    book_f25 myBooks; // init provided class
+    string tx;        // init strings that hold user input
+    char op;
+
+    newTX(tx, op); // get the first transaction, then move to loop
+
+    while (op != 'Q') { // run until the user quits
+        switch (op) {
+        case 'A': {
+            parseResult parse = parseTransaction(tx, op);
+            bool res = myBooks.addBook(parse.ID, *parse.title);
+
+            if (res == true) {
+                cout << "book added" << endl;
+            } else {
+                cout << "book not added" << endl;
+            }
+        } break;
+
+        case 'L': {
+            myBooks.list();
+        } break;
+
+        case 'R': {
+            parseResult par = parseTransaction(tx, op);
+            bool res = myBooks.removeBook(par.ID);
+
+            if (res == true) {
+                cout << "book removed" << endl;
+            } else {
+                cout << "book not removed" << endl;
+            }
+        } break;
+
+        case 'O': {
+            parseResult par = parseTransaction(tx, op);
+            bool res = myBooks.orderBooks(par.ID, *par.quantity);
+
+            if (res == true) {
+                cout << "order added" << endl;
+            } else {
+                cout << "order not added" << endl;
+            }
+        } break;
+
+        case 'S': {
+            using Status = book_f25::sellResult::Status;
+            parseResult parse;
+            parse = parseTransaction(tx, op);
+
+            book_f25::sellResult res;
+            res = myBooks.sellBooks(parse.ID, *parse.quantity);
+
+            if (res.status == Status::Success) {
+                cout << "books sold" << endl;
+            } else if (res.status == Status::NotFound) {
+                cout << "books not sold" << endl;
+            } else if (res.status == Status::Short) {
+                handleShortage(myBooks, parse.ID, *parse.quantity, res.onHand,
+                               res.title);
+            }
+        } break;
+
+        default: {
+            cout << "invalid transaction" << endl;
+        } break;
+        }
+        newTX(tx, op);
+    }
+    // when the user inputs "Q", exit while loop and end
+    cout << "exiting..." << endl;
+    return 0;
+}

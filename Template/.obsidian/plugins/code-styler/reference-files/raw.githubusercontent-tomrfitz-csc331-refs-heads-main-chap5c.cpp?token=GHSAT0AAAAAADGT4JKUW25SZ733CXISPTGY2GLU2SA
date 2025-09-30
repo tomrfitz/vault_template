@@ -1,0 +1,91 @@
+
+// chap5c.cpp
+// kbyron@bmcc.cuny.edu
+// 9-15-2022 revised 2-10-2025
+// create and display an ordered linked list of integers
+#include <iostream>
+using namespace std;
+
+struct nodeType {
+    int info;
+    nodeType *link;
+};
+
+// --------------------------------------------------------------
+nodeType *buildListFwdOrdered();          // function prototype
+void insertNum(nodeType *&head, int num); // function prototype
+void showList(nodeType *head);            // function prototype
+
+// --------------------------------------------------------------
+int main() {
+    nodeType *head = buildListFwdOrdered();
+    showList(head);
+}
+
+// --------------------------------------------------------------
+nodeType *buildListFwdOrdered() { // function definition
+    nodeType *first, *newNode, *last;
+    int num;
+    cout << "Enter a list of integers ending with -999." << endl;
+    cin >> num;
+    first = NULL;
+    last = NULL;
+    while (num != -999) {
+        insertNum(first, num);
+        cout << "successful insertion" << endl;
+        cin >> num;
+    }
+    return first;
+}
+
+// --------------------------------------------------------------
+void insertNum(nodeType *&first, int num) {
+    nodeType *current, *newNode, *prior;
+    if (first == NULL) { // insert into empty list
+        first = new nodeType;
+        first->info = num;
+        first->link = NULL;
+    } else {
+        if (first->info > num) { // insert at top of list
+            newNode = new nodeType;
+            newNode->info = num;
+            newNode->link = first;
+            first = newNode;
+        } else {
+            int done = 0;
+            current = first;
+            while ((current != NULL) && (!done)) {
+                if (current->info > num) { // insert between 2 nodes
+                    newNode = new nodeType;
+                    newNode->info = num;
+                    newNode->link = current;
+                    prior->link = newNode;
+                    done = 1;
+                } else {
+                    prior = current;
+                    current = current->link;
+                }
+            }
+            if (!done) { // insert at end of list
+                newNode = new nodeType;
+                newNode->info = num;
+                newNode->link = current;
+                prior->link = newNode;
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------
+void showList(nodeType *head) { // function definition
+    nodeType *current;
+    current = head;
+    cout << "List: ";
+    while (current != NULL) {
+        cout << current->info << " ";
+        current = current->link;
+    }
+    cout << endl;
+}
+
+// --------------------------------------------------------------
