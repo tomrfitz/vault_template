@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Files/put pdfs, images, etc here.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "put pdfs, images, etc here"
             }
           }
         ]
@@ -94,7 +94,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -186,7 +187,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Files/put pdfs, images, etc here.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -196,7 +197,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for put pdfs, images, etc here"
             }
           },
           {
@@ -205,12 +206,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Files/put pdfs, images, etc here.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from put pdfs, images, etc here"
             }
           },
           {
@@ -289,8 +290,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "895dc005d5f6776a",
+  "active": "37fee19caee42314",
   "lastOpenFiles": [
+    "Notes/Put regular notes here.md",
+    "Files/put pdfs, images, etc here.md",
     "README.md",
     "Journal/Daily/2025-09-30.md",
     "Journal/Yearly/2025.md",
