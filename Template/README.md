@@ -1,6 +1,6 @@
 ---
 date created: 2025-09-30, 16:48:05
-date modified: 2025-09-30, 18:00:44
+date modified: 2025-09-30, 18:10:17
 ---
 
 # README
@@ -14,7 +14,15 @@ This template should work as-is for most people looking for the above, and is de
 
 ## Usage
 
-Use periodic notes to plan goals or tasks, and record what you got up to or how you felt about that day, week, or month. Over time, this will create a neat timeline of actions / interests / ideas / people you spend time on as you link your daily work in your periodic notes. This sort of structure is helpful both to evaluate your past, and to scaffold your future, helping you stay aligned with your goals and principles.
+Use periodic notes to plan goals or tasks, and record what you got up to or how you felt about that day, week, or month. Over time, this will create a neat timeline of actions / interests / ideas / people you spend time on as you make links in your periodic notes. This sort of structure is helpful both to evaluate your past and to scaffold your future, helping you stay aligned with your goals and principles.
+
+For example, you might record some tasks:
+
+![[2025-09-30#Goals]]
+
+or some reflections about last week:
+
+![[2025-W39#Reflections]]
 
 ## Plugins
 
@@ -36,17 +44,29 @@ This vault template is organized into 7 root directories by default:
 
 There are 2 bases included by default:
 
-[[Journal.base]]
-[[Related.base]]
+[[Journal.base]], which drives the `## Lookback` section of periodic notes. This helps remind you what you wrote about.
+[[Related.base]] lives in the sidebar, and helps you see if there are other connected ideas to what you're currently working on.
 
 ### Files
 
+This is where external, 'non-Obsidian' files live, such as lecture handouts, book covers, or other images.
+
 ### Functions
+
+This template has one function included, [[daily_quote.js]], which provides a random daily quote from _TODO_
 
 ### Journal
 
+The Journal contains periodic notes and is the backbone of the vault's linking structure. Just as important as our ideas are is how we interact with them over time. 
+
 ### Notes
+
+This might normally be the root folder for some people, but I like [[#Notebook Navigator]] and this keeps things tidy. 
 
 ### References
 
+Storage for web clippings from kepano's browser extension and literature imported via Zotero Integration. These files don't generally contain a lot of your own writing, but will be linked to, referenced, and cited in your own notes.
+
 ### Templates
+
+These are files for the Templater plugin to automatically generate periodic notes and Zotero imports.

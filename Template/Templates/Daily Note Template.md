@@ -30,6 +30,8 @@ tR += navStr
 
 ## Reflections
 
+## Lookback
+
 ### Notes Created Today
 
 ![[Journal.base#Created this day]]

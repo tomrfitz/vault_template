@@ -30,6 +30,8 @@ done in {{query.file.filenameWithoutExtension}}
 
 ## Reflections
 
+## Lookback
+
 ![[Journal.base#Created this week]]
 
 ![[Journal.base#Modified this week]]

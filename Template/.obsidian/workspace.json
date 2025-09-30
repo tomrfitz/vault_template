@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dca858301ee0688f",
+        "id": "e3bc8d687f812c80",
         "type": "tabs",
         "children": [
           {
-            "id": "41f6d42cda34f20e",
+            "id": "b8761d1f8b3414dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -202,27 +202,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "41f6d42cda34f20e",
+  "active": "b8761d1f8b3414dc",
   "lastOpenFiles": [
-    "Journal/Daily.md",
-    "README.md",
-    "References/@Vaswani - 2017lxt.md",
-    "Bases/Journal.base",
-    "Bases/Classes.base",
     "Journal/Daily/2025-09-30.md",
+    "Journal/Yearly/2025.md",
+    "Templates/Yearly Note Template.md",
     "Journal/Quarterly/2025-Q3.md",
     "Journal/Monthly/2025-09.md",
-    "References/@mankerContextPredictabilityPhonetic2016.md",
-    "Bases/Related.base",
-    "Journal/Yearly/2025.md",
     "Journal/Weekly/2025-W40.md",
-    "Templates/Yearly Note Template.md",
+    "Journal/Weekly/2025-W39.md",
     "Templates/Weekly Note Template.md",
     "Templates/Quarterly Note Template.md",
     "Templates/Monthly Note Template.md",
     "Templates/Literature Note Template.md",
     "Templates/Daily Note Template.md",
+    "README.md",
     "Templates/Class Template.md",
+    "Journal/Daily.md",
+    "References/@Vaswani - 2017lxt.md",
+    "Bases/Journal.base",
+    "Bases/Classes.base",
+    "References/@mankerContextPredictabilityPhonetic2016.md",
+    "Bases/Related.base",
     "Templates",
     "Functions/daily_quote.js",
     "Bases",
