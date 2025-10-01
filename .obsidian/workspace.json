@@ -94,12 +94,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 462.5
   },
   "right": {
     "id": "ee1291caa3e3111e",
@@ -290,7 +289,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "37fee19caee42314",
+  "active": "895dc005d5f6776a",
   "lastOpenFiles": [
     "Notes/Put regular notes here.md",
     "Files/put pdfs, images, etc here.md",
