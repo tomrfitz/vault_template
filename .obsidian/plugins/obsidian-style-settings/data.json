@@ -2,5 +2,9 @@
   "minimal-style@@minimal-strike-lists": true,
   "minimal-style@@sidebar-tabs-style": "sidebar-tabs-default",
   "minimal-style@@sidebar-tabs-names": "tab-names-single",
-  "minimal-style@@tabs-style": "tabs-modern"
+  "minimal-style@@tabs-style": "tabs-modern",
+  "minimal-style@@metadata-heading-off": true,
+  "minimal-style@@metadata-add-property-off": true,
+  "minimal-style@@metadata-icons-off": false,
+  "minimal-style@@metadata-dividers": false
 }
