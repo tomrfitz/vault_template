@@ -8,7 +8,8 @@
   "enabledCssSnippets": [
     "flexoki-code-syntax",
     "editor-gutter",
-    "flexoki-blue-accent"
+    "flexoki-blue-accent",
+    "git-diff"
   ],
   "accentColor": ""
 }

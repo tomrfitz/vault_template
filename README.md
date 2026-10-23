@@ -155,10 +155,12 @@ colour scheme. Style Settings holds only Minimal's tab, sidebar and
 properties options. Leave Obsidian's own accent colour unset: it takes one
 value for both modes and overrides Minimal's.
 
-Three snippets. `flexoki-blue-accent.css` makes the accent Flexoki blue, 600
+Four snippets. `flexoki-blue-accent.css` makes the accent Flexoki blue, 600
 in light mode and 400 in dark; turn it off for Minimal's Flexoki cyan, the
 spec's colour for links and active states. `editor-gutter.css` moves line
-numbers from the pane's edge to beside the text. `flexoki-code-syntax.css` colours code by the role table at
+numbers from the pane's edge to beside the text. `git-diff.css` shows Git's
+split diff as code, in the monospace font, and keeps Minimal's gutters from
+covering it. `flexoki-code-syntax.css` colours code by the role table at
 [stephango.com/flexoki](https://stephango.com/flexoki), which neither Minimal
 nor Obsidian follow. Live preview (CodeMirror) and reading view (Prism)
 tokenise code differently. Plain variables stay body text in both (the spec

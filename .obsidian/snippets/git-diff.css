@@ -1,0 +1,19 @@
+/* Git's split diff view borrows the markdown editor's classes, so Minimal
+ * pins its gutters over the diff text, and it renders in the prose font with
+ * Markdown styling. Put the gutters back in the flow and show it as code. */
+body :not(.canvas-node) .git-split-diff-view.markdown-source-view.mod-cm6 .cm-gutters {
+  position: sticky !important;
+}
+
+.git-split-diff-view .cm-content,
+.git-split-diff-view .cm-gutters {
+  font-family: var(--font-monospace) !important;
+  font-size: var(--code-size) !important;
+}
+
+.git-split-diff-view .cm-content * {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-style: normal !important;
+}
