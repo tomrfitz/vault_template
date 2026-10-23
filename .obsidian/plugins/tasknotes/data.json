@@ -469,7 +469,7 @@
     "pomodoro-stats-base": "TaskNotes/Views/pomodoro-stats.base",
     "relationships": "TaskNotes/Views/relationships.base"
   },
-  "maintainDueDateOffsetInRecurring": false,
+  "maintainDueDateOffsetInRecurring": true,
   "resetCheckboxesOnRecurrence": false,
   "useFrontmatterMarkdownLinks": false,
   "enableGoogleCalendar": false,
