@@ -6,6 +6,8 @@ reviewed: {{today:YYYY-MM-DD}}
 created: {{now}}
 ---
 
+# {{title}}
+
 ## Purpose
 
 {{cursor}}

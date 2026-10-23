@@ -2,4 +2,6 @@
 created: {{now}}
 ---
 
+# {{title}}
+
 {{cursor}}

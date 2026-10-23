@@ -98,7 +98,7 @@
       "ending-word-ignore-characters": ".?!,:;'\")”’0123456789-"
     },
     "file-name-heading": {
-      "enabled": false
+      "enabled": true
     },
     "header-increment": {
       "enabled": true,

@@ -5,6 +5,8 @@ instructor:
 created: {{now}}
 ---
 
+# {{title}}
+
 ## Topics
 
 {{cursor}}

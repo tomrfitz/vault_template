@@ -7,6 +7,8 @@ areas: []
 created: {{now}}
 ---
 
+# {{title}}
+
 ## Agenda
 
 - {{cursor}}

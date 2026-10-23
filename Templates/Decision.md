@@ -8,6 +8,8 @@ supersedes:
 created: {{now}}
 ---
 
+# {{title}}
+
 ## Context
 
 {{cursor}}
