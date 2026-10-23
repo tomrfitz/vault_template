@@ -3,14 +3,24 @@ type: area
 created: {{now}}
 ---
 
+# {{title}}
+
 ## Overview
 
 {{cursor}}
 
 ## People
 
-![[Wiki.base#Responsible]]
+![[People.base#By area]]
 
-## SOPs, decisions and meetings
+## SOPs
 
-![[Wiki.base#In area]]
+![[SOPs.base#By area]]
+
+## Decisions
+
+![[Decisions.base#By area]]
+
+## Meetings
+
+![[Meetings.base#By area]]

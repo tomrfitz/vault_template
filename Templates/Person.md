@@ -6,18 +6,20 @@ areas: []
 created: {{now}}
 ---
 
+# {{title}}
+
 ## Notes
 
 {{cursor}}
 
-## Owns
+## SOPs
 
-![[Wiki.base#Owns]]
+![[SOPs.base#By person]]
 
 ## Decisions
 
-![[Wiki.base#Decided]]
+![[Decisions.base#By person]]
 
 ## Meetings
 
-![[Wiki.base#Attended]]
+![[Meetings.base#By person]]

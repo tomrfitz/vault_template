@@ -1,0 +1,41 @@
+filters:
+  and:
+    - type == "sop"
+    - '!file.inFolder("Templates")'
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - owner
+      - areas
+      - reviewed
+    sort:
+      - property: reviewed
+        direction: ASC
+  - type: table
+    name: By person
+    filters:
+      and:
+        - list(owner).contains(this)
+    order:
+      - file.name
+      - owner
+      - areas
+      - reviewed
+    sort:
+      - property: reviewed
+        direction: ASC
+  - type: table
+    name: By area
+    filters:
+      and:
+        - list(areas).contains(this)
+    order:
+      - file.name
+      - owner
+      - areas
+      - reviewed
+    sort:
+      - property: reviewed
+        direction: ASC

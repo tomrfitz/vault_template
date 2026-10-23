@@ -1,0 +1,41 @@
+filters:
+  and:
+    - type == "meeting"
+    - '!file.inFolder("Templates")'
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - date
+      - attendees
+      - areas
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: By person
+    filters:
+      and:
+        - list(attendees).contains(this)
+    order:
+      - file.name
+      - date
+      - attendees
+      - areas
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: By area
+    filters:
+      and:
+        - list(areas).contains(this)
+    order:
+      - file.name
+      - date
+      - attendees
+      - areas
+    sort:
+      - property: date
+        direction: DESC

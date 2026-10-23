@@ -1,0 +1,28 @@
+filters:
+  and:
+    - type == "person"
+    - '!file.inFolder("Templates")'
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - role
+      - team
+      - areas
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: By area
+    filters:
+      and:
+        - list(areas).contains(this)
+    order:
+      - file.name
+      - role
+      - team
+      - areas
+    sort:
+      - property: file.name
+        direction: ASC

@@ -1,0 +1,12 @@
+filters:
+  and:
+    - type == "area"
+    - '!file.inFolder("Templates")'
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
