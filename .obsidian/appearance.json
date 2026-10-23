@@ -1,0 +1,12 @@
+{
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "baseFontSize": 16,
+  "textFontFamily": "Sarasa UI SC",
+  "interfaceFontFamily": "Sarasa UI SC",
+  "monospaceFontFamily": "Sarasa Fixed SC",
+  "enabledCssSnippets": [
+    "flexoki-code-syntax"
+  ],
+  "accentColor": ""
+}

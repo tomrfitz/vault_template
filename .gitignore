@@ -1,0 +1,20 @@
+.trash/
+.DS_Store
+Thumbs.db
+
+# Obsidian runtime state: layout, stats, caches
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/vault-stats.json
+.obsidian/graph.json
+.obsidian/plugins/*/cache/
+.obsidian/plugins/obsidian-git/obsidian_askpass.sh
+.obsidian/plugins/omnisearch/*.json.gz
+
+# Platform binaries that plugins download themselves
+.obsidian/plugins/obsidian-zotero-desktop-connector/pdfannots2json*
+
+# Citation caches built from your own Zotero library
+.pandoc/zotero-library-*.json

@@ -1,0 +1,18 @@
+{
+  "pathToPandoc": "",
+  "tooltipDelay": 400,
+  "zoteroGroups": [
+    {
+      "id": 1,
+      "name": "My Library"
+    }
+  ],
+  "renderCitations": true,
+  "renderCitationsReadingMode": true,
+  "renderLinkCitations": true,
+  "pullFromZotero": true,
+  "cslLang": "en-US",
+  "enableCiteKeyCompletion": true,
+  "showCitekeyTooltips": true,
+  "cslStyleURL": "https://raw.githubusercontent.com/citation-style-language/styles/master/modern-language-association.csl"
+}

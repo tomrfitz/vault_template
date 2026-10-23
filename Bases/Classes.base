@@ -1,0 +1,14 @@
+filters:
+  and:
+    - type == "class"
+    - '!file.inFolder("Templates")'
+views:
+  - type: table
+    name: Classes
+    order:
+      - file.name
+      - semester
+      - instructor
+    sort:
+      - property: semester
+        direction: DESC

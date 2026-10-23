@@ -1,0 +1,11 @@
+# LF everywhere, whatever core.autocrlf says on Windows.
+* text=auto eol=lf
+
+# Plugin and theme files are stored byte-for-byte as their authors ship them.
+.obsidian/plugins/** -text
+.obsidian/themes/** -text
+# A minified main.js changed on both sides is a conflict, never a text merge.
+.obsidian/plugins/*/main.js binary
+# Machine-local settings: on a two-sided change keep this vault's copy.
+# Needs `git config merge.ours.driver true` in each clone (see README).
+.obsidian/plugins/obsidian-git/data.json merge=ours

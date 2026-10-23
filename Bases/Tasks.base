@@ -1,0 +1,76 @@
+# Task views for journal notes, kept apart from the TaskNotes-generated files
+# in TaskNotes/Views so "TaskNotes: Update default base files" never touches
+# them. Period keys work as in Periodic.base.
+filters:
+  and:
+    - type == "task"
+formulas:
+  period: if(this.type == "weekly", "GGGG-[W]WW", if(this.type == "monthly", "YYYY-MM", if(this.type == "quarterly", "YYYY-[Q]Q", if(this.type == "yearly", "YYYY", "YYYY-MM-DD"))))
+  plannedIn: if(scheduled, date(scheduled).format(formula.period), if(due, date(due).format(formula.period), ""))
+  completedIn: if(completed, date(completed).format(formula.period), "")
+  closed: '["done", "cancelled"].contains(status)'
+  doneToday: if(complete_instances, list(complete_instances).map(date(value).format("YYYY-MM-DD")).contains(today().format("YYYY-MM-DD")), false)
+  # A past daily note shows nothing here; today's, or any other note, shows the live list.
+  live: today().format("YYYY-MM-DD") == this.file.name || this.type != "daily"
+views:
+  - type: tasknotesTaskList
+    name: Now
+    filters:
+      and:
+        - formula.live
+        - '!formula.closed'
+        - '!formula.doneToday'
+        - status != "inbox"
+        - or:
+            - date(scheduled) < today() + "1 day"
+            - date(due) < today() + "1 day"
+    sort:
+      - property: due
+        direction: ASC
+      - property: scheduled
+        direction: ASC
+  - type: tasknotesTaskList
+    name: Planned
+    filters:
+      and:
+        - '!formula.closed'
+        - formula.plannedIn == this.file.name
+    sort:
+      - property: scheduled
+        direction: ASC
+  - type: tasknotesTaskList
+    name: Done
+    filters:
+      and:
+        - formula.completedIn == this.file.name
+    sort:
+      - property: completed
+        direction: ASC
+  - type: tasknotesTaskList
+    name: Inbox
+    filters:
+      and:
+        - status == "inbox"
+    sort:
+      - property: created
+        direction: ASC
+  - type: tasknotesTaskList
+    name: Unscheduled
+    filters:
+      and:
+        - '!formula.closed'
+        - status != "inbox"
+        - scheduled.isEmpty()
+        - due.isEmpty()
+    sort:
+      - property: priority
+        direction: DESC
+  - type: tasknotesTaskList
+    name: Linked
+    filters:
+      and:
+        - '!formula.closed'
+        - file.hasLink(this.file)
+    sort:
+      - property: due
+        direction: ASC

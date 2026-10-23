@@ -1,0 +1,18 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "Files",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Notes",
+  "useMarkdownLinks": false,
+  "showInlineTitle": true,
+  "propertiesInDocument": "visible",
+  "readableLineLength": true,
+  "showLineNumber": true,
+  "showIndentGuide": true,
+  "spellcheck": true,
+  "strictLineBreaks": false,
+  "useTab": false,
+  "tabSize": 4,
+  "promptDelete": true,
+  "trashOption": "local"
+}

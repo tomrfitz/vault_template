@@ -1,0 +1,48 @@
+/* Flexoki code syntax colors — theme-independent
+ * Source: https://stephango.com/flexoki
+ * Mirrors the OBSD personal-vault Style Settings mapping.
+ *
+ * Convention:
+ *   normal/text   → bk / dark-tx        (high contrast)
+ *   comment       → tx-3                (faint)
+ *   operator      → tx                  (default)
+ *   punctuation   → tx (light) / tx-2 (dark)
+ *   keyword       → green-600 / green-400
+ *   string        → cyan-600 / cyan-400
+ *   function      → orange-600 / orange-400
+ *   property      → blue-600 / blue-400
+ *   tag           → blue-600 / blue-400  (same family as property)
+ *   value         → purple-600 / purple-400
+ *   important     → red-600 / red-400
+ *   background    → bg-2
+ */
+
+.theme-light {
+  --code-background: #F2F0E5;
+  --code-normal: #100F0F;
+  --code-comment: #B7B5AC;
+  --code-function: #BC5215;
+  --code-keyword: #66800B;
+  --code-important: #AF3029;
+  --code-operator: #6F6E69;
+  --code-property: #205EA6;
+  --code-punctuation: #6F6E69;
+  --code-string: #24837B;
+  --code-tag: #205EA6;
+  --code-value: #5E409D;
+}
+
+.theme-dark {
+  --code-background: #1C1B1A;
+  --code-normal: #CECDC3;
+  --code-comment: #575653;
+  --code-function: #DA702C;
+  --code-keyword: #879A39;
+  --code-important: #D14D41;
+  --code-operator: #878580;
+  --code-property: #4385BE;
+  --code-punctuation: #878580;
+  --code-string: #3AA99F;
+  --code-tag: #4385BE;
+  --code-value: #8B7EC8;
+}

@@ -1,0 +1,64 @@
+# Embedded in journal notes. `this` is the embedding note, and its `type`
+# picks the period, so one view serves days, weeks, months, quarters and years.
+# Weeks are ISO weeks (GGGG-[W]WW): Moment's YYYY and gggg disagree with ISO
+# around New Year.
+filters:
+  and:
+    - '!file.inFolder("Templates")'
+    - file.path != this.file.path
+formulas:
+  period: if(this.type == "weekly", "GGGG-[W]WW", if(this.type == "monthly", "YYYY-MM", if(this.type == "quarterly", "YYYY-[Q]Q", if(this.type == "yearly", "YYYY", "YYYY-MM-DD"))))
+  createdIn: if(created, date(created).format(formula.period), file.ctime.format(formula.period))
+  modifiedIn: if(modified, date(modified).format(formula.period), file.mtime.format(formula.period))
+  dateIn: if(date, date(date).format(formula.period), "")
+  # Journal notes rank by period length; a note lists only the finer-grained ones.
+  rank: if(type == "daily", 1, if(type == "weekly", 2, if(type == "monthly", 3, if(type == "quarterly", 4, if(type == "yearly", 5, 0)))))
+  thisRank: if(this.type == "daily", 1, if(this.type == "weekly", 2, if(this.type == "monthly", 3, if(this.type == "quarterly", 4, if(this.type == "yearly", 5, 0)))))
+  journal: formula.rank > 0
+views:
+  - type: table
+    name: Journal
+    filters:
+      and:
+        - formula.journal
+        - formula.rank < formula.thisRank
+        - formula.dateIn == this.file.name
+    groupBy:
+      property: type
+      direction: DESC
+    order:
+      - file.name
+    sort:
+      - property: date
+        direction: ASC
+  - type: table
+    name: Notes
+    filters:
+      and:
+        - '!formula.journal'
+        - type != "task"
+        - or:
+            - formula.createdIn == this.file.name
+            - file.hasLink(this.file)
+    order:
+      - file.name
+      - type
+      - created
+    sort:
+      - property: created
+        direction: ASC
+  - type: table
+    name: Changed
+    filters:
+      and:
+        - '!formula.journal'
+        - type != "task"
+        - formula.modifiedIn == this.file.name
+        - formula.createdIn != this.file.name
+    order:
+      - file.name
+      - type
+      - modified
+    sort:
+      - property: modified
+        direction: DESC
