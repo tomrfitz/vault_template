@@ -258,7 +258,7 @@
   "pinRecentNotesWithShortcuts": false,
   "recentNotesCount": 5,
   "showFolderIcons": true,
-  "showRootFolder": true,
+  "showRootFolder": false,
   "inheritFolderColors": true,
   "folderSortOrder": "alpha-asc",
   "enableFolderNotes": false,
