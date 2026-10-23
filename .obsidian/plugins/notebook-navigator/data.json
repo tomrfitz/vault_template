@@ -113,7 +113,7 @@
     "createMissingPeriodicNote": true
   },
   "dualPane": true,
-  "dualPaneOrientation": "horizontal",
+  "dualPaneOrientation": "vertical",
   "narrowSidebarLayout": "singlePane",
   "narrowSidebarTriggerMode": "fitPanes",
   "narrowSidebarCustomWidth": 350,
@@ -587,12 +587,59 @@
   "fileIcons": {},
   "fileColors": {},
   "fileBackgroundColors": {},
-  "folderIcons": {},
+  "folderIcons": {
+    "Bases": "database",
+    "Files": "file",
+    "Journal": "book-open",
+    "Journal/Daily": "calendar-1",
+    "Journal/Weekly": "calendar-range",
+    "Journal/Monthly": "calendar-days",
+    "Journal/Quarterly": "calendar",
+    "Journal/Yearly": "calendar",
+    "Notes": "notepad-text",
+    "References": "library",
+    "TaskNotes": "tasknotes-simple",
+    "TaskNotes/Tasks": "square-check",
+    "Templates": "layout-template"
+  },
   "folderColors": {},
   "folderBackgroundColors": {},
-  "folderSortOverrides": {},
+  "folderSortOverrides": {
+    "Journal": "title-desc",
+    "Journal/Daily": "title-desc",
+    "Journal/Weekly": "title-desc",
+    "Journal/Monthly": "title-desc",
+    "Journal/Quarterly": "title-desc",
+    "Journal/Yearly": "title-desc",
+    "Templates": "title-asc"
+  },
   "folderTreeSortOverrides": {},
-  "folderAppearances": {},
+  "folderAppearances": {
+    "Bases": {
+      "mode": "compact"
+    },
+    "Journal/Daily": {
+      "mode": "compact"
+    },
+    "Journal/Weekly": {
+      "mode": "compact"
+    },
+    "Journal/Monthly": {
+      "mode": "compact"
+    },
+    "Journal/Quarterly": {
+      "mode": "compact"
+    },
+    "Journal/Yearly": {
+      "mode": "compact"
+    },
+    "TaskNotes/Views": {
+      "mode": "compact"
+    },
+    "Templates": {
+      "mode": "compact"
+    }
+  },
   "tagIcons": {},
   "tagColors": {},
   "tagBackgroundColors": {},
