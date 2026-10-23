@@ -1,15 +1,18 @@
+<%* const d = moment(tp.file.title, "YYYY-[Q]Q", true) -%>
 ---
 type: quarterly
-date: {{date:YYYY-MM-DD}}
-previous: "[[Journal/Quarterly/{{date-1Q:YYYY-[Q]Q}}|{{date-1Q:YYYY-[Q]Q}}]]"
-next: "[[Journal/Quarterly/{{date+1Q:YYYY-[Q]Q}}|{{date+1Q:YYYY-[Q]Q}}]]"
-year: "[[Journal/Yearly/{{date:YYYY}}|{{date:YYYY}}]]"
-created: {{now}}
+date: <% d.format("YYYY-MM-DD") %>
+previous: "[[Journal/Quarterly/<% d.clone().subtract(1, "quarter").format("YYYY-[Q]Q") %>|<% d.clone().subtract(1, "quarter").format("YYYY-[Q]Q") %>]]"
+next: "[[Journal/Quarterly/<% d.clone().add(1, "quarter").format("YYYY-[Q]Q") %>|<% d.clone().add(1, "quarter").format("YYYY-[Q]Q") %>]]"
+year: "[[Journal/Yearly/<% d.format("YYYY") %>|<% d.format("YYYY") %>]]"
+created: <% moment().format("YYYY-MM-DDTHH:mm:ssZ") %>
 ---
+
+# <% tp.file.title %>
 
 ## Review
 
-{{cursor}}
+<% tp.file.cursor() %>
 
 ## Tasks
 

@@ -1,16 +1,19 @@
+<%* const d = moment(tp.file.title, "YYYY-MM-DD", true) -%>
 ---
 type: daily
-date: {{date:YYYY-MM-DD}}
-previous: "[[Journal/Daily/{{date-1d:YYYY-MM-DD}}|{{date-1d:YYYY-MM-DD}}]]"
-next: "[[Journal/Daily/{{date+1d:YYYY-MM-DD}}|{{date+1d:YYYY-MM-DD}}]]"
-week: "[[Journal/Weekly/{{date:GGGG-[W]WW}}|{{date:GGGG-[W]WW}}]]"
-month: "[[Journal/Monthly/{{date:YYYY-MM}}|{{date:YYYY-MM}}]]"
-created: {{now}}
+date: <% d.format("YYYY-MM-DD") %>
+previous: "[[Journal/Daily/<% d.clone().subtract(1, "day").format("YYYY-MM-DD") %>|<% d.clone().subtract(1, "day").format("YYYY-MM-DD") %>]]"
+next: "[[Journal/Daily/<% d.clone().add(1, "day").format("YYYY-MM-DD") %>|<% d.clone().add(1, "day").format("YYYY-MM-DD") %>]]"
+week: "[[Journal/Weekly/<% d.format("GGGG-[W]WW") %>|<% d.format("GGGG-[W]WW") %>]]"
+month: "[[Journal/Monthly/<% d.format("YYYY-MM") %>|<% d.format("YYYY-MM") %>]]"
+created: <% moment().format("YYYY-MM-DDTHH:mm:ssZ") %>
 ---
+
+# <% tp.file.title %>
 
 ## Log
 
-- {{cursor}}
+- <% tp.file.cursor() %>
 
 ## Tasks
 

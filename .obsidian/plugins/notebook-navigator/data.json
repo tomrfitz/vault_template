@@ -381,7 +381,7 @@
   "showParentFolderIcon": false,
   "calendarEnabled": true,
   "calendarPlacement": "left-sidebar",
-  "calendarConfirmBeforeCreate": true,
+  "calendarConfirmBeforeCreate": false,
   "calendarShowHiddenItems": false,
   "calendarLocale": "en-gb",
   "calendarWeekendDays": "sat-sun",
@@ -403,11 +403,11 @@
   "calendarCustomMonthPattern": "[Monthly]/YYYY-MM",
   "calendarCustomQuarterPattern": "[Quarterly]/YYYY-[Q]Q",
   "calendarCustomYearPattern": "[Yearly]/YYYY",
-  "calendarCustomFileTemplate": "Templates/Daily.md",
-  "calendarCustomWeekTemplate": "Templates/Weekly.md",
-  "calendarCustomMonthTemplate": "Templates/Monthly.md",
-  "calendarCustomQuarterTemplate": "Templates/Quarterly.md",
-  "calendarCustomYearTemplate": "Templates/Yearly.md",
+  "calendarCustomFileTemplate": null,
+  "calendarCustomWeekTemplate": null,
+  "calendarCustomMonthTemplate": null,
+  "calendarCustomQuarterTemplate": null,
+  "calendarCustomYearTemplate": null,
   "keyboardShortcuts": {
     "pane:move-up": [
       {

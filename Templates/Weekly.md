@@ -1,15 +1,18 @@
+<%* const d = moment(tp.file.title, "GGGG-[W]WW", true) -%>
 ---
 type: weekly
-date: {{date:YYYY-MM-DD}}
-previous: "[[Journal/Weekly/{{date-1w:GGGG-[W]WW}}|{{date-1w:GGGG-[W]WW}}]]"
-next: "[[Journal/Weekly/{{date+1w:GGGG-[W]WW}}|{{date+1w:GGGG-[W]WW}}]]"
-month: "[[Journal/Monthly/{{thursday:YYYY-MM}}|{{thursday:YYYY-MM}}]]"
-created: {{now}}
+date: <% d.format("YYYY-MM-DD") %>
+previous: "[[Journal/Weekly/<% d.clone().subtract(1, "week").format("GGGG-[W]WW") %>|<% d.clone().subtract(1, "week").format("GGGG-[W]WW") %>]]"
+next: "[[Journal/Weekly/<% d.clone().add(1, "week").format("GGGG-[W]WW") %>|<% d.clone().add(1, "week").format("GGGG-[W]WW") %>]]"
+month: "[[Journal/Monthly/<% d.clone().isoWeekday(4).format("YYYY-MM") %>|<% d.clone().isoWeekday(4).format("YYYY-MM") %>]]"
+created: <% moment().format("YYYY-MM-DDTHH:mm:ssZ") %>
 ---
+
+# <% tp.file.title %>
 
 ## Review
 
-{{cursor}}
+<% tp.file.cursor() %>
 
 ## Tasks
 

@@ -1,14 +1,17 @@
+<%* const d = moment(tp.file.title, "YYYY", true) -%>
 ---
 type: yearly
-date: {{date:YYYY-MM-DD}}
-previous: "[[Journal/Yearly/{{date-1y:YYYY}}|{{date-1y:YYYY}}]]"
-next: "[[Journal/Yearly/{{date+1y:YYYY}}|{{date+1y:YYYY}}]]"
-created: {{now}}
+date: <% d.format("YYYY-MM-DD") %>
+previous: "[[Journal/Yearly/<% d.clone().subtract(1, "year").format("YYYY") %>|<% d.clone().subtract(1, "year").format("YYYY") %>]]"
+next: "[[Journal/Yearly/<% d.clone().add(1, "year").format("YYYY") %>|<% d.clone().add(1, "year").format("YYYY") %>]]"
+created: <% moment().format("YYYY-MM-DDTHH:mm:ssZ") %>
 ---
+
+# <% tp.file.title %>
 
 ## Review
 
-{{cursor}}
+<% tp.file.cursor() %>
 
 ## Tasks
 
