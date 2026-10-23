@@ -1,48 +1,104 @@
-/* Flexoki code syntax colors — theme-independent
- * Source: https://stephango.com/flexoki
- * Mirrors the OBSD personal-vault Style Settings mapping.
+/* Flexoki syntax colours for code blocks, light (600) and dark (400),
+ * from the spec table at https://stephango.com/flexoki:
+ *   tx-3     comments
+ *   tx-2     punctuation, operators
+ *   red      invalid, imports
+ *   orange   functions (builtins too)
+ *   yellow   constants, booleans, types
+ *   green    keywords
+ *   cyan     strings (regex too)
+ *   blue     variables, attributes, properties, tags
+ *   purple   numbers
+ *   magenta  language features: decorators, preprocessor
+ * Where the table is silent, kepano's Zed port decides (builtins as
+ * functions, regex as strings, types yellow). His ports disagree in places;
+ * the table wins.
  *
- * Convention:
- *   normal/text   → bk / dark-tx        (high contrast)
- *   comment       → tx-3                (faint)
- *   operator      → tx                  (default)
- *   punctuation   → tx (light) / tx-2 (dark)
- *   keyword       → green-600 / green-400
- *   string        → cyan-600 / cyan-400
- *   function      → orange-600 / orange-400
- *   property      → blue-600 / blue-400
- *   tag           → blue-600 / blue-400  (same family as property)
- *   value         → purple-600 / purple-400
- *   important     → red-600 / red-400
- *   background    → bg-2
- */
+ * Obsidian styles code through the --code-* variables (live preview uses
+ * CodeMirror's .cm-* classes, reading view Prism's .token.*). Where it
+ * routes a token to the wrong role, the rules below re-point it. */
 
 .theme-light {
-  --code-background: #F2F0E5;
   --code-normal: #100F0F;
+  --code-background: #F2F0E5;
   --code-comment: #B7B5AC;
-  --code-function: #BC5215;
-  --code-keyword: #66800B;
-  --code-important: #AF3029;
-  --code-operator: #6F6E69;
-  --code-property: #205EA6;
   --code-punctuation: #6F6E69;
+  --code-operator: #6F6E69;
+  --code-important: #AF3029;
+  --code-function: #BC5215;
+  --code-constant: #AD8301;
+  --code-keyword: #66800B;
   --code-string: #24837B;
+  --code-property: #205EA6;
   --code-tag: #205EA6;
   --code-value: #5E409D;
+  --code-feature: #A02F6F;
 }
 
 .theme-dark {
-  --code-background: #1C1B1A;
   --code-normal: #CECDC3;
+  --code-background: #1C1B1A;
   --code-comment: #575653;
-  --code-function: #DA702C;
-  --code-keyword: #879A39;
-  --code-important: #D14D41;
-  --code-operator: #878580;
-  --code-property: #4385BE;
   --code-punctuation: #878580;
+  --code-operator: #878580;
+  --code-important: #D14D41;
+  --code-function: #DA702C;
+  --code-constant: #D0A215;
+  --code-keyword: #879A39;
   --code-string: #3AA99F;
+  --code-property: #4385BE;
   --code-tag: #4385BE;
   --code-value: #8B7EC8;
+  --code-feature: #CE5D97;
+}
+
+/* Names after def/class are functions, as Prism already colours them. */
+.cm-s-obsidian .cm-def {
+  color: var(--code-function);
+}
+
+/* Plain identifiers and member names stay body text. CodeMirror tags every
+ * identifier as a variable, so the spec's blue would colour nearly all code
+ * in live preview; Prism leaves them untagged, and reading view is the
+ * reference. */
+.cm-s-obsidian .cm-variable,
+.cm-s-obsidian .cm-variable-2,
+.cm-s-obsidian .cm-property {
+  color: var(--code-normal);
+}
+
+/* Attributes are blue (Obsidian colours them as functions in live preview,
+ * and Prism's attribute names as strings). */
+.cm-s-obsidian .cm-attribute,
+.markdown-rendered .token.attr-name {
+  color: var(--code-property);
+}
+
+/* Constants, booleans and types: yellow. */
+.cm-s-obsidian .cm-atom,
+.cm-s-obsidian .cm-type,
+.cm-s-obsidian .cm-variable-3,
+.markdown-rendered .token.constant,
+.markdown-rendered .token.boolean,
+.markdown-rendered .token.class-name {
+  color: var(--code-constant);
+}
+
+/* Language features: magenta. Obsidian colours decorators (cm-meta) as
+ * comments. */
+.cm-s-obsidian .cm-meta,
+.markdown-rendered .token.decorator,
+.markdown-rendered .token.annotation {
+  color: var(--code-feature);
+}
+
+/* Regex reads as a string, attribute values too. */
+.markdown-rendered .token.regex,
+.markdown-rendered .token.attr-value {
+  color: var(--code-string);
+}
+
+/* Imports: red. Prism marks JS import/export as keyword.module. */
+.markdown-rendered .token.keyword.module {
+  color: var(--code-important);
 }
