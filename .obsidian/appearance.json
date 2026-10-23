@@ -6,7 +6,8 @@
   "interfaceFontFamily": "Sarasa UI SC",
   "monospaceFontFamily": "Sarasa Fixed SC",
   "enabledCssSnippets": [
-    "flexoki-code-syntax"
+    "flexoki-code-syntax",
+    "editor-gutter"
   ],
   "accentColor": ""
 }

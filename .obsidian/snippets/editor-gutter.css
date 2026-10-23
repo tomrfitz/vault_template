@@ -1,0 +1,9 @@
+/* Minimal pins the line-number gutter to the pane's left edge. With a
+ * readable line width, put it beside the centred text block instead:
+ * line start = left file margin + half the space the line leaves free,
+ * less the gutter and a small gap. */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-gutters {
+  --gutter-line: min(var(--line-width), var(--max-width));
+  left: calc(var(--size-4-8) + (100% - var(--size-4-8) - var(--gutter-line)) / 2) !important;
+  transform: translateX(calc(-100% - var(--size-4-3)));
+}
