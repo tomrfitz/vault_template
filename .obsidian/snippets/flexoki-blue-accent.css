@@ -1,0 +1,14 @@
+/* Accent: Flexoki blue instead of Minimal's Flexoki cyan, per mode
+ * (blue-600 #205EA6 light, blue-400 #4385BE dark), in the HSL form Minimal's
+ * scheme uses. Turn this snippet off to get cyan back. */
+.theme-light.minimal-flexoki-light {
+  --accent-h: 212;
+  --accent-s: 68%;
+  --accent-l: 39%;
+}
+
+.theme-dark.minimal-flexoki-dark {
+  --accent-h: 208;
+  --accent-s: 49%;
+  --accent-l: 50%;
+}

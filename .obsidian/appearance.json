@@ -7,7 +7,8 @@
   "monospaceFontFamily": "Sarasa Fixed SC",
   "enabledCssSnippets": [
     "flexoki-code-syntax",
-    "editor-gutter"
+    "editor-gutter",
+    "flexoki-blue-accent"
   ],
   "accentColor": ""
 }
