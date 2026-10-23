@@ -1,7 +1,3 @@
-# Embedded in journal notes. `this` is the embedding note, and its `type`
-# picks the period, so one view serves days, weeks, months, quarters and years.
-# Weeks are ISO weeks (GGGG-[W]WW): Moment's YYYY and gggg disagree with ISO
-# around New Year.
 filters:
   and:
     - '!file.inFolder("Templates")'
@@ -11,7 +7,6 @@ formulas:
   createdIn: if(created, date(created).format(formula.period), file.ctime.format(formula.period))
   modifiedIn: if(modified, date(modified).format(formula.period), file.mtime.format(formula.period))
   dateIn: if(date, date(date).format(formula.period), "")
-  # Journal notes rank by period length; a note lists only the finer-grained ones.
   rank: if(type == "daily", 1, if(type == "weekly", 2, if(type == "monthly", 3, if(type == "quarterly", 4, if(type == "yearly", 5, 0)))))
   thisRank: if(this.type == "daily", 1, if(this.type == "weekly", 2, if(this.type == "monthly", 3, if(this.type == "quarterly", 4, if(this.type == "yearly", 5, 0)))))
   journal: formula.rank > 0
@@ -35,7 +30,7 @@ views:
     name: Notes
     filters:
       and:
-        - '!formula.journal'
+        - "!formula.journal"
         - type != "task"
         - or:
             - formula.createdIn == this.file.name
@@ -51,7 +46,7 @@ views:
     name: Changed
     filters:
       and:
-        - '!formula.journal'
+        - "!formula.journal"
         - type != "task"
         - formula.modifiedIn == this.file.name
         - formula.createdIn != this.file.name
