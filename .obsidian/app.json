@@ -10,7 +10,7 @@
   "showLineNumber": true,
   "showIndentGuide": true,
   "spellcheck": true,
-  "strictLineBreaks": false,
+  "strictLineBreaks": true,
   "useTab": false,
   "tabSize": 4,
   "promptDelete": true,

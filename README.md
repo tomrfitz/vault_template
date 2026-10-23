@@ -1,6 +1,6 @@
 ---
 created: 2026-10-23T04:35:51-04:00
-modified: 2026-10-23T04:45:40-04:00
+modified: 2026-10-23T13:11:04-04:00
 ---
 
 # Vault template
@@ -23,7 +23,7 @@ Two ideas shape it:
 ## Layout
 
 | Folder        | Holds                                                                |
-|---------------|----------------------------------------------------------------------|
+| ------------- | -------------------------------------------------------------------- |
 | `Bases/`      | Views embedded in notes or pinned in the sidebar                     |
 | `Files/`      | Attachments                                                          |
 | `Journal/`    | `Daily/`, `Weekly/`, `Monthly/`, `Quarterly/`, `Yearly/`             |
@@ -53,6 +53,10 @@ Folders hold what a plugin manages; meaning lives in properties.
   below it in order (an `####` after `##` becomes `###`). Obsidian's inline
   title is off to avoid showing the title twice. After a rename, update the
   heading by hand.
+- **Line breaks follow CommonMark.** A single newline is a space, as on
+  GitHub or in pandoc, so break prose lines wherever you like
+  ([semantic line breaks](https://sembr.org) suit this). Start a new
+  paragraph with a blank line, and write a run of fields as a list.
 
 ## Daily use
 
