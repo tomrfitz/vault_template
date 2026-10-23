@@ -46,7 +46,10 @@ Folders hold what a plugin manages; meaning lives in properties.
   never `file.ctime`, which resets on every clone or sync.
 - **`type`** names a note's kind: `daily` … `yearly`, `task`, `person`,
   `area`, `sop`, `decision`, `meeting`, `class`, `literature`. A plain note
-  has none.
+  has none. Notebook Navigator's Properties section browses notes by it.
+- **Links and properties, not tags.** A link says what a note relates to, and
+  `type` says what it is, so the tag views are off. TaskNotes still adds an
+  `archived` tag to tasks it archives.
 - **Every note opens with `# Its title`**, so a file describes itself
   outside Obsidian too. Templates write it, Linter adds it from the file name
   when it's missing, and Linter's header-increment rule keeps the levels

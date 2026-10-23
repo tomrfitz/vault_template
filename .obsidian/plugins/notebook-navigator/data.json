@@ -4,7 +4,14 @@
       "id": "default",
       "name": "Default",
       "fileVisibility": "supported",
-      "propertyKeys": [],
+      "propertyKeys": [
+        {
+          "key": "type",
+          "showInNavigation": true,
+          "showInList": false,
+          "showInFileMenu": false
+        }
+      ],
       "hiddenFolders": [],
       "descendantExcludedFolders": [],
       "hiddenTags": [],
@@ -270,7 +277,7 @@
   "pinCreatedFolderNote": false,
   "folderNoteOpenLocation": "current-tab",
   "showNearestFolderNoteInSidebar": true,
-  "showTags": true,
+  "showTags": false,
   "showTagIcons": true,
   "showAllTagsFolder": true,
   "showUntagged": true,
@@ -309,7 +316,7 @@
   "compactItemHeightScaleText": true,
   "showQuickActions": true,
   "quickActionRevealInFolder": false,
-  "quickActionAddTag": true,
+  "quickActionAddTag": false,
   "quickActionAddToShortcuts": true,
   "quickActionPinNote": true,
   "quickActionOpenInNewTab": false,
