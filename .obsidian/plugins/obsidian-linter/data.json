@@ -109,17 +109,17 @@
     },
     "remove-trailing-punctuation-in-heading": {
       "enabled": true,
-      "punctuation-to-remove": ".,;:!"
+      "punctuation-to-remove": ".,;:!。，；：！"
     },
     "footnote-after-punctuation": {
-      "enabled": false
+      "enabled": true
     },
     "move-footnotes-to-the-bottom": {
-      "enabled": false,
+      "enabled": true,
       "include-blank-line-between-footnotes": false
     },
     "re-index-footnotes": {
-      "enabled": false
+      "enabled": true
     },
     "auto-correct-common-misspellings": {
       "enabled": false,
@@ -162,10 +162,10 @@
       "double-quote-style": "\"\""
     },
     "remove-consecutive-list-markers": {
-      "enabled": false
+      "enabled": true
     },
     "remove-empty-list-markers": {
-      "enabled": false
+      "enabled": true
     },
     "remove-hyphenated-line-breaks": {
       "enabled": false
@@ -189,7 +189,7 @@
       "enabled": true
     },
     "compact-yaml": {
-      "enabled": false,
+      "enabled": true,
       "inner-new-lines": false
     },
     "consecutive-blank-lines": {
@@ -200,7 +200,7 @@
       "tabsize": 4
     },
     "empty-line-around-blockquotes": {
-      "enabled": false
+      "enabled": true
     },
     "empty-line-around-code-fences": {
       "enabled": true
@@ -235,10 +235,10 @@
       "enabled": true
     },
     "remove-space-around-characters": {
-      "enabled": false,
+      "enabled": true,
       "include-fullwidth-forms": true,
       "include-cjk-symbols-and-punctuation": true,
-      "include-dashes": true,
+      "include-dashes": false,
       "other-symbols": ""
     },
     "remove-space-before-or-after-characters": {
@@ -265,22 +265,22 @@
       "enabled": false
     },
     "prevent-double-list-item-indicator-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "proper-ellipsis-on-paste": {
       "enabled": false
     },
     "remove-hyphens-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "remove-leading-or-trailing-whitespace-on-paste": {
-      "enabled": false
+      "enabled": true
     },
     "remove-leftover-footnotes-from-quote-on-paste": {
       "enabled": false
     },
     "remove-multiple-blank-lines-on-paste": {
-      "enabled": false
+      "enabled": true
     }
   },
   "lintOnSave": true,

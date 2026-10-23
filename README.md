@@ -138,11 +138,15 @@ Shipped but disabled, for study: Zotero Integration (literature notes from
 Enable them under Community plugins.
 
 Linter's rules mirror a markdownlint setup: MD001, MD004 (`-`), MD009,
-MD012, MD022, MD023, MD026 (`.,;:!`), MD029, MD030, MD031, MD034, MD039,
-MD041 (a first-line H1, from the file name), MD047, MD049 (`_`),
-MD050 (`**`), MD058 and MD060. It skips `Templates/`
-(unrendered tokens) and `TaskNotes/` (TaskNotes owns those files), and also
-rewrites emphasis inside `%% %%` comments.
+MD012, MD022, MD023, MD026 (`.,;:!` and their full-width forms), MD029,
+MD030, MD031, MD034, MD039, MD041 (a first-line H1, from the file name),
+MD047, MD049 (`_`), MD050 (`**`), MD058 and MD060. Beyond markdownlint, it
+moves footnotes to the bottom and renumbers them, puts blank lines around
+blockquotes, drops empty and doubled list markers and blank lines inside
+YAML, removes spaces around CJK punctuation, and cleans up pasted text
+(hyphenated line breaks, surrounding whitespace, extra blank lines). It
+skips `Templates/` (unrendered tokens) and `TaskNotes/` (TaskNotes owns
+those files), and also rewrites emphasis inside `%% %%` comments.
 
 ## Look
 
