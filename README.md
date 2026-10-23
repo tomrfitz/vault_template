@@ -90,6 +90,10 @@ that link to the active note. Open it and `Bases/Related.base` in the right
 sidebar, split below the other tabs; Obsidian keeps that layout per vault,
 so it isn't part of the template.
 
+Notebook Navigator is the only file browser: the core File explorer is off.
+Drag its tab to the front of the left sidebar and pin it, so every vault
+opens to it. That layout is per vault too.
+
 ### How the journal views work
 
 An embedded base's `this` is the note embedding it. `Periodic.base` and
